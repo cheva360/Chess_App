@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "C:/Users/sebas/OneDrive/Documents/GitHub/CHESS/Chess_App/Packages",
+    "projectPath": "C:/Users/sebas/OneDrive/Documents/GitHub/ChessFight/Chess_App/Packages",
     "unityVersion": "6000.2.5f1"
   },
   "inputs": [
-    "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Packages\\manifest.json",
-    "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Packages\\packages-lock.json",
+    "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Packages\\manifest.json",
+    "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Packages\\packages-lock.json",
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.2.5f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.2d.sprite@1.0.0": {
       "name": "com.unity.2d.sprite",
       "displayName": "2D Sprite",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.2d.sprite@331abd9a1e2f",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.2d.sprite@331abd9a1e2f",
       "fingerprint": "331abd9a1e2ff424a1ef2626e16936071ab7ce3d",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
@@ -22,7 +22,7 @@
     "com.unity.2d.tilemap@1.0.0": {
       "name": "com.unity.2d.tilemap",
       "displayName": "2D Tilemap Editor",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.2d.tilemap@aa5f5491174d",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.2d.tilemap@aa5f5491174d",
       "fingerprint": "aa5f5491174d692ae7c6327102931ff1f46f7d2a",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
@@ -32,7 +32,7 @@
     "com.unity.ai.navigation@2.0.9": {
       "name": "com.unity.ai.navigation",
       "displayName": "AI Navigation",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.ai.navigation@5218e4bf7edc",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.ai.navigation@5218e4bf7edc",
       "fingerprint": "5218e4bf7edc04fcad4ed3836c1c41aef334b996",
       "editorCompatibility": "6000.0.0a1",
       "version": "2.0.9",
@@ -42,7 +42,7 @@
     "com.unity.collab-proxy@2.9.3": {
       "name": "com.unity.collab-proxy",
       "displayName": "Unity Version Control",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.collab-proxy@ab839cc7d2ad",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.collab-proxy@ab839cc7d2ad",
       "fingerprint": "ab839cc7d2adf143e5378baf46edc31cbc5d84f7",
       "editorCompatibility": "2021.3.0f1",
       "version": "2.9.3",
@@ -52,7 +52,7 @@
     "com.unity.ide.visualstudio@2.0.23": {
       "name": "com.unity.ide.visualstudio",
       "displayName": "Visual Studio Editor",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.ide.visualstudio@198cdf337d13",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.ide.visualstudio@198cdf337d13",
       "fingerprint": "198cdf337d13c83ca953581515630d66b779e92b",
       "editorCompatibility": "2019.4.25f1",
       "version": "2.0.23",
@@ -62,7 +62,7 @@
     "com.unity.inputsystem@1.14.2": {
       "name": "com.unity.inputsystem",
       "displayName": "Input System",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.inputsystem@be6c4fd0abf5",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.inputsystem@be6c4fd0abf5",
       "fingerprint": "be6c4fd0abf5b9b45f956b97294032a67f3c2f4d",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.14.2",
@@ -72,7 +72,7 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
       "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
@@ -82,7 +82,7 @@
     "com.unity.test-framework@1.5.1": {
       "name": "com.unity.test-framework",
       "displayName": "Test Framework",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.test-framework@038a2b0cacd2",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.test-framework@038a2b0cacd2",
       "fingerprint": "038a2b0cacd25d4e9668f9e0f7612139f5dbee81",
       "editorCompatibility": "6000.0.44f1",
       "version": "1.5.1",
@@ -92,7 +92,7 @@
     "com.unity.timeline@1.8.9": {
       "name": "com.unity.timeline",
       "displayName": "Timeline",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.timeline@6b9e48457ddb",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.timeline@6b9e48457ddb",
       "fingerprint": "6b9e48457ddb4f64813d77fd77efc79a8f3102ae",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.8.9",
@@ -102,7 +102,7 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "Unity UI",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.ugui@38c58105e446",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.ugui@38c58105e446",
       "fingerprint": "38c58105e446af1c55b1d9d1e5bf970ff7d271c8",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
@@ -384,7 +384,7 @@
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
-      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\CHESS\\Chess_App\\Library\\PackageCache\\com.unity.ext.nunit@031a54704bff",
+      "resolvedPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Library\\PackageCache\\com.unity.ext.nunit@031a54704bff",
       "fingerprint": "031a54704bffe39e6a0324909f8eaa4565bdebf2",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.5",
