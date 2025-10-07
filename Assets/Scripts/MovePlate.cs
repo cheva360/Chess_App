@@ -39,6 +39,9 @@ public class MovePlate : MonoBehaviour
             if (cp.name == "black_king") controller.GetComponent<Game>().Winner("white");
 
             Destroy(cp);
+
+            Debug.Log(cp); 
+            Debug.Log(reference);
         }
 
         //Set the Chesspiece's original location to be empty
@@ -58,6 +61,7 @@ public class MovePlate : MonoBehaviour
 
         //Destroy the move plates including self
         reference.GetComponent<Chessman>().DestroyMovePlates();
+
     }
 
     public void SetCoords(int x, int y)
@@ -75,4 +79,5 @@ public class MovePlate : MonoBehaviour
     {
         return reference;
     }
+
 }
