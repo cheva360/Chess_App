@@ -29,38 +29,41 @@ public class MovePlate : MonoBehaviour
     public void OnMouseUp()
     {
         controller = GameObject.FindGameObjectWithTag("GameController");
+        Game game = controller.GetComponent<Game>();
+        Chessman chessman = reference.GetComponent<Chessman>();
 
         //Destroy the victim Chesspiece
         if (attack)
         {
-            GameObject cp = controller.GetComponent<Game>().GetPosition(matrixX, matrixY);
+            GameObject cp = game.GetPosition(matrixX, matrixY);
 
-            if (cp.name == "white_king") controller.GetComponent<Game>().Winner("black");
-            if (cp.name == "black_king") controller.GetComponent<Game>().Winner("white");
+            if (cp.name == "white_king") game.Winner("black");
+            if (cp.name == "black_king") game.Winner("white");
 
             Destroy(cp);
-
-            Debug.Log(cp); 
+            Debug.Log(cp);
             Debug.Log(reference);
         }
 
         //Set the Chesspiece's original location to be empty
-        controller.GetComponent<Game>().SetPositionEmpty(reference.GetComponent<Chessman>().GetXBoard(), 
-            reference.GetComponent<Chessman>().GetYBoard());
+        game.SetPositionEmpty(chessman.GetXBoard(),
+            chessman.GetYBoard());
 
         //Move reference chess piece to this position
-        reference.GetComponent<Chessman>().SetXBoard(matrixX);
-        reference.GetComponent<Chessman>().SetYBoard(matrixY);
-        reference.GetComponent<Chessman>().SetCoords();
+        chessman.SetXBoard(matrixX);
+        chessman.SetYBoard(matrixY);
+        chessman.SetCoords();
+
 
         //Update the matrix
-        controller.GetComponent<Game>().SetPosition(reference);
+        game.SetPosition(reference);
+        chessman.SetMoveEnd();
 
         //Switch Current Player
-        controller.GetComponent<Game>().NextTurn();
+        game.NextTurn();
 
         //Destroy the move plates including self
-        reference.GetComponent<Chessman>().DestroyMovePlates();
+        chessman.DestroyMovePlates();
 
     }
 
@@ -79,5 +82,4 @@ public class MovePlate : MonoBehaviour
     {
         return reference;
     }
-
 }

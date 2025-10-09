@@ -7,6 +7,7 @@ public class Chessman : MonoBehaviour
     //References to objects in our Unity Scene
     public GameObject controller;
     public GameObject movePlate;
+    private Game gameController;
 
     //Position for this Chesspiece on the Board
     //The correct position will be set later
@@ -20,11 +21,15 @@ public class Chessman : MonoBehaviour
     public Sprite black_queen, black_knight, black_bishop, black_king, black_rook, black_pawn;
     public Sprite white_queen, white_knight, white_bishop, white_king, white_rook, white_pawn;
 
+    private bool isFirstMove = true;
+
+
+
     public void Activate()
     {
         //Get the game controller
         controller = GameObject.FindGameObjectWithTag("GameController");
-
+        gameController = controller.GetComponent<Game>();
         //Take the instantiated location and adjust transform
         SetCoords();
 
@@ -86,7 +91,7 @@ public class Chessman : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (!controller.GetComponent<Game>().IsGameOver() && controller.GetComponent<Game>().GetCurrentPlayer() == player)
+        if (!gameController.IsGameOver() && gameController.GetCurrentPlayer() == player)
         {
             //Remove all moveplates relating to previously selected piece
             DestroyMovePlates();
@@ -108,6 +113,7 @@ public class Chessman : MonoBehaviour
 
     public void InitiateMovePlates()
     {
+        var whoIsWhite = gameController.GetWhoIsWhite();
         switch (this.name)
         {
             case "black_queen":
@@ -144,11 +150,10 @@ public class Chessman : MonoBehaviour
                 LineMovePlate(0, -1);
                 break;
             case "black_pawn":
-                PawnMovePlate(xBoard, yBoard - 1);
+                PawnMovePlate(xBoard, -whoIsWhite);
                 break;
             case "white_pawn":
-                PawnMovePlate(xBoard, yBoard + 1);
-                PawnMovePlate(xBoard, yBoard + 2);
+                PawnMovePlate(xBoard, whoIsWhite);
                 break;
         }
     }
@@ -218,21 +223,29 @@ public class Chessman : MonoBehaviour
     public void PawnMovePlate(int x, int y)
     {
         Game sc = controller.GetComponent<Game>();
-        if (sc.PositionOnBoard(x, y))
+        int moveY = yBoard + y;
+        if (sc.PositionOnBoard(x, moveY))
         {
-            if (sc.GetPosition(x, y) == null)
+            if (sc.GetPosition(x, moveY) == null)
             {
-                MovePlateSpawn(x, y);
+                MovePlateSpawn(x, moveY);
             }
 
-            if (sc.PositionOnBoard(x + 1, y) && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y).GetComponent<Chessman>().player != player)
+            if (sc.PositionOnBoard(x + 1, moveY) && sc.GetPosition(x + 1, moveY) != null && sc.GetPosition(x + 1, moveY).GetComponent<Chessman>().player != player)
             {
-                MovePlateAttackSpawn(x + 1, y);
+                MovePlateAttackSpawn(x + 1, moveY);
             }
 
-            if (sc.PositionOnBoard(x - 1, y) && sc.GetPosition(x - 1, y) != null && sc.GetPosition(x - 1, y).GetComponent<Chessman>().player != player)
+            if (sc.PositionOnBoard(x - 1, moveY) && sc.GetPosition(x - 1, moveY) != null && sc.GetPosition(x - 1, moveY).GetComponent<Chessman>().player != player)
             {
-                MovePlateAttackSpawn(x - 1, y);
+                MovePlateAttackSpawn(x - 1, moveY);
+            }
+        }
+        if (isFirstMove)
+        {
+            if (sc.GetPosition(x, moveY + y) == null)
+            {
+                MovePlateSpawn(x, moveY + y);
             }
         }
     }
@@ -280,5 +293,10 @@ public class Chessman : MonoBehaviour
         mpScript.attack = true;
         mpScript.SetReference(gameObject);
         mpScript.SetCoords(matrixX, matrixY);
+    }
+
+    public void SetMoveEnd()
+    {
+        isFirstMove = false;
     }
 }

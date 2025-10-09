@@ -22,6 +22,9 @@ public class Game : MonoBehaviour
     //Game Ending
     private bool gameOver = false;
 
+    private const int MAIN_PLAYER = 1, SUB_Player = -1;
+    private int whoIsWhite = MAIN_PLAYER;
+
     //Unity calls this right when the game starts, there are a few built in functions
     //that Unity can call for you
     public void Start()
@@ -92,11 +95,8 @@ public class Game : MonoBehaviour
         return gameOver;
     }
 
-    public float turn = 1;
     public void NextTurn()
     {
-        
-        Debug.Log(turn);
         if (currentPlayer == "white")
         {
             currentPlayer = "black";
@@ -104,7 +104,6 @@ public class Game : MonoBehaviour
         else
         {
             currentPlayer = "white";
-            turn++;
         }
     }
 
@@ -118,7 +117,7 @@ public class Game : MonoBehaviour
             SceneManager.LoadScene("Game"); //Restarts the game by loading the scene over again
         }
     }
-    
+
     public void Winner(string playerWinner)
     {
         gameOver = true;
@@ -128,5 +127,10 @@ public class Game : MonoBehaviour
         GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text = playerWinner + " is the winner";
 
         GameObject.FindGameObjectWithTag("RestartText").GetComponent<Text>().enabled = true;
+    }
+
+    public int GetWhoIsWhite()
+    {
+        return whoIsWhite;
     }
 }
