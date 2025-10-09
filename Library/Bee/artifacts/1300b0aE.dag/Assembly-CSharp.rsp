@@ -415,6 +415,7 @@
 "Assets/Scripts/Game.cs"
 "Assets/Scripts/MovePlate.cs"
 "Assets/Scripts/player1.cs"
+"Assets/Scripts/player1arrow.cs"
 -langversion:9.0
 /deterministic
 /optimize+

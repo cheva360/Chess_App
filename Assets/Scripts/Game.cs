@@ -92,8 +92,11 @@ public class Game : MonoBehaviour
         return gameOver;
     }
 
+    public float turn = 1;
     public void NextTurn()
     {
+        
+        Debug.Log(turn);
         if (currentPlayer == "white")
         {
             currentPlayer = "black";
@@ -101,6 +104,7 @@ public class Game : MonoBehaviour
         else
         {
             currentPlayer = "white";
+            turn++;
         }
     }
 

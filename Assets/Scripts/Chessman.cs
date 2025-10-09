@@ -148,6 +148,7 @@ public class Chessman : MonoBehaviour
                 break;
             case "white_pawn":
                 PawnMovePlate(xBoard, yBoard + 1);
+                PawnMovePlate(xBoard, yBoard + 2);
                 break;
         }
     }
