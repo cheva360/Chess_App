@@ -616,7 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d2ad0c93f1f6d48a3aaf447a0e2d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 2
 --- !u!212 &1310974944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -738,7 +737,19 @@ MonoBehaviour:
     m_ActionId: c0a0bc48-eb25-447c-a340-acc0693e6557
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1310974943}
+        m_TargetAssemblyTypeName: player1, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8801ea0e-76d4-4c1f-96a3-0ce35e6f41c9
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -785,6 +796,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 5f1157c7-b85f-439f-989f-b3123a9fd327
     m_ActionName: 'Player/Player2[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 461ec156-b665-4b97-8fc7-1f96286ed366
+    m_ActionName: 'Player/Player2Attack[/Keyboard/rightShift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -957,7 +972,19 @@ MonoBehaviour:
     m_ActionId: c0a0bc48-eb25-447c-a340-acc0693e6557
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1755286514}
+        m_TargetAssemblyTypeName: player1arrow, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8801ea0e-76d4-4c1f-96a3-0ce35e6f41c9
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -1004,6 +1031,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 5f1157c7-b85f-439f-989f-b3123a9fd327
     m_ActionName: 'Player/Player2[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 461ec156-b665-4b97-8fc7-1f96286ed366
+    m_ActionName: 'Player/Player2Attack[/Keyboard/rightShift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1526,7 +1557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d2ad0c93f1f6d48a3aaf447a0e2d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 5
 --- !u!212 &2106469720
 SpriteRenderer:
   m_ObjectHideFlags: 0

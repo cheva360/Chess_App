@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\assets\\scripts\\chessman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\assets\\scripts\\player1arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player1arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\assets\\scripts\\player1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|c:\\users\\sebas\\onedrive\\documents\\github\\chessfight\\chess_app\\assets\\scripts\\chessman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chessman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,16 +19,8 @@
       "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|c:\\users\\sebas\\onedrive\\documents\\github\\chessfight\\chess_app\\assets\\scripts\\moveplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\assets\\scripts\\moveplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\moveplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\assets\\scripts\\player1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\assets\\scripts\\player1arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C4038C0-20BF-C386-E47A-68E8770C835E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player1arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MovePlate.cs",
               "DocumentMoniker": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\MovePlate.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovePlate.cs",
@@ -42,12 +42,11 @@
               "RelativeToolTip": "Assets\\Scripts\\MovePlate.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAQwFQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T18:48:18.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T18:48:18.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\Game.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game.cs",
@@ -55,12 +54,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Game.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAQwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T18:48:14.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T18:48:14.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Chessman.cs",
               "DocumentMoniker": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\Chessman.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Chessman.cs",
@@ -73,27 +71,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "player1arrow.cs",
               "DocumentMoniker": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\player1arrow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\player1arrow.cs",
               "ToolTip": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\player1arrow.cs",
               "RelativeToolTip": "Assets\\Scripts\\player1arrow.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAYwB0AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T18:00:48.674Z"
+              "WhenOpened": "2025-10-07T18:00:48.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "player1.cs",
               "DocumentMoniker": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\player1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\player1.cs",
               "ToolTip": "C:\\Users\\sebas\\OneDrive\\Documents\\GitHub\\ChessFight\\Chess_App\\Assets\\Scripts\\player1.cs",
               "RelativeToolTip": "Assets\\Scripts\\player1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T04:13:37.509Z"
+              "WhenOpened": "2025-10-07T04:13:37.509Z",
+              "EditorCaption": ""
             }
           ]
         }

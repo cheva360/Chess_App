@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -8,11 +9,13 @@ public class player1arrow : MonoBehaviour
     public float speed = 5f;
     public Rigidbody2D P1rb;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     private Vector2 moveInput;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
 
     }
 
@@ -34,5 +37,22 @@ public class player1arrow : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+    // gets player attack keyboard input and employs PlayerAttack Coroutine
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            // Start the coroutine instead of putting the logic here
+            StartCoroutine(PlayerAttack());
+        }
+    }   
+    // player attack coroutine
+    private IEnumerator PlayerAttack()
+    {
+        sr.color = Color.yellow;
+        Debug.Log("space");
+        yield return new WaitForSeconds(.3f);
+        sr.color = Color.white;
     }
 }
