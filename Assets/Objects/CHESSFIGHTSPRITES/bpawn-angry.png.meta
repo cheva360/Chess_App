@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1abb97ffaf09d3643b61e8e77df64e5e
+guid: a11dcc59c633c0b47ac8bc4f55ea64a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5438550021425195278
-    second: wknight-neutral_0
+      213: -3690764929307504906
+    second: bpawn-angry_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wknight-neutral_0
+      name: bpawn-angry_0
       rect:
         serializedVersion: 2
-        x: 406
-        y: 135
-        width: 893
-        height: 1490
+        x: 184
+        y: 319
+        width: 1208
+        height: 1116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e09ed380e6c997b40800000000000000
-      internalID: 5438550021425195278
+      spriteID: 6fe082fe9d4c7ccc0800000000000000
+      internalID: -3690764929307504906
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wknight-neutral_0: 5438550021425195278
+      bpawn-angry_0: -3690764929307504906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

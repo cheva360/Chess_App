@@ -4,24 +4,27 @@ using UnityEngine.InputSystem;
 
 public class player1 : MonoBehaviour
 {
-    private float speed = 2f;
+    private float speed = 1f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private Vector2 lastMoveDirection;
+    private bool isDashing = false;
+    private bool canDash = true;
+    private float dashCooldown = 1f;
+    public CooldownBar dashCooldownBar;
 
-    // --- New Variables ---
-    private Vector2 lastMoveDirection; // To store the last direction we moved
-    private bool isDashing = false; // State to check if we are currently dashing
+    // --- NEW VARIABLE ---
+    // Add a public reference to the arrow script
+    public player1arrow arrowIndicator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        lastMoveDirection = Vector2.right; // Default direction (e.g., facing right)
+        lastMoveDirection = Vector2.right;
     }
 
-    // Use FixedUpdate for physics
     void FixedUpdate()
     {
-        // Only allow normal movement if the player is NOT dashing
         if (!isDashing)
         {
             rb.linearVelocity = moveInput * speed;
@@ -31,8 +34,6 @@ public class player1 : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-
-        // If the player is providing movement input, update the last direction
         if (moveInput != Vector2.zero)
         {
             lastMoveDirection = moveInput.normalized;
@@ -41,28 +42,42 @@ public class player1 : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        // Start the dash coroutine when the button is pressed
-        if (context.performed && !isDashing)
+        // This remains the single point of control for the attack/dash cooldown
+        if (context.performed && canDash)
         {
             StartCoroutine(PlayerDash());
         }
     }
 
-    // This coroutine now handles the dash logic
     private IEnumerator PlayerDash()
     {
+        canDash = false;
         isDashing = true;
-        float dashPower = 8f; // The speed/power of the dash
-        float dashTime = 0.3f; // How long the dash lasts
+        float dashPower = 4f;
+        float dashTime = 0.3f;
 
-        // Apply a strong, instant velocity in the last known direction
+        // --- TRIGGER VISUALS (UPDATED) ---
+        // Tell the cooldown bar to start
+        if (dashCooldownBar != null)
+        {
+            dashCooldownBar.StartCooldown(dashCooldown);
+        }
+
+        // Tell the arrow to play its visual effect
+        if (arrowIndicator != null)
+        {
+            arrowIndicator.PlayAttackEffect();
+        }
+
+        // Dash Physics
         rb.linearVelocity = lastMoveDirection * dashPower;
-
-        // Wait for the dash duration
         yield return new WaitForSeconds(dashTime);
-
-        // Stop the dash
-        rb.linearVelocity = Vector2.zero; // Stop the player immediately after dashing
+        rb.linearVelocity = Vector2.zero;
         isDashing = false;
+
+        // Cooldown Timer
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
+
