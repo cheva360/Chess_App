@@ -30,6 +30,10 @@ public class player1 : MonoBehaviour
     public TextMeshPro healthText; // The text object for health display
     private bool isDead = false;
 
+    private bool hasReactivated = false;
+
+    public Vector2 spawnPoint; // Assign this in the Inspector or at runtime
+
 
     void Start()
     {
@@ -41,12 +45,13 @@ public class player1 : MonoBehaviour
         // Initialize Health
         currentHealth = maxHealth;
         UpdateHealthText();
+        Debug.Log("activated");
     }
 
     void Update()
     {
         // Stop all actions if dead
-        if (isDead) return;
+        //if (isDead) return;
 
         // Flip the sprite based on horizontal movement
         if (moveInput.x > 0)
@@ -62,7 +67,7 @@ public class player1 : MonoBehaviour
     void FixedUpdate()
     {
         // Return if the player is dead
-        if (isDead) return;
+        //if (isDead) return;
 
         // Movement logic should only run when the player is not dashing.
         // The dash velocity is handled exclusively within the PlayerDash coroutine.
@@ -86,7 +91,7 @@ public class player1 : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        if (isDead) return;
+        //if (isDead) return;
         moveInput = context.ReadValue<Vector2>();
         if (moveInput != Vector2.zero)
         {
@@ -96,7 +101,7 @@ public class player1 : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        if (isDead) return;
+        //if (isDead) return;
 
         if (context.performed && canDash)
         {
@@ -146,7 +151,7 @@ public class player1 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (isDead) return; // Can't damage a dead player
+        //if (isDead) return; // Can't damage a dead player
 
         currentHealth -= damage;
         UpdateHealthText();
@@ -165,30 +170,65 @@ public class player1 : MonoBehaviour
         }
     }
 
+
     void Die()
     {
-        isDead = true;
+        //isDead = true;
 
-        // Make the player invisible and unable to collide with anything
-        spriteRenderer.enabled = false;
-        playerCollider.enabled = false;
+        //// Make the player invisible and unable to collide with anything
+        //spriteRenderer.enabled = false;
+        //playerCollider.enabled = false;
 
-        // Make the health text invisible too
-        if (healthText != null)
-        {
-            healthText.gameObject.SetActive(false);
-        }
+        //// Make the health text invisible too
+        //if (healthText != null)
+        //{
+        //    healthText.gameObject.SetActive(false);
+        //}
 
-        // Stop all movement
-        rb.linearVelocity = Vector2.zero;
+        //// Stop all movement
+        //rb.linearVelocity = Vector2.zero;
+
+
 
         foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
-        { 
+        {
             if (obj.tag == "Untagged" && obj.scene.IsValid())
             {
                 obj.SetActive(true);
             }
+            if (obj.CompareTag("Player"))
+            {
+                obj.SetActive(false);
+            }
         }
+
+        hasReactivated = false; // Reset flag so ReactivatePlayer can be called next time
     }
+
+    void OnEnable()
+    {
+        // Reset dash state
+        canDash = true;
+        isDashing = false;
+
+        // Reset health
+        currentHealth = maxHealth;
+        UpdateHealthText();
+        isDead = false;
+
+        // Teleport to spawn point
+        transform.position = spawnPoint;
+
+        // Re-enable visuals and collider
+        if (spriteRenderer != null) spriteRenderer.enabled = true;
+        if (playerCollider != null) playerCollider.enabled = true;
+        if (healthText != null) healthText.gameObject.SetActive(true);
+
+        // Stop all movement
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        
+    }
+
+    
 }
 

@@ -59,6 +59,7 @@ public class MovePlate : MonoBehaviour
                 }
 
             }
+            
             bool isPVP = true;
 
 

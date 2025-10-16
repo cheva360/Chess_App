@@ -1235,6 +1235,7 @@ MonoBehaviour:
   attackOffset: 1
   maxHealth: 2
   healthText: {fileID: 477187065}
+  spawnPoint: {x: 0, y: 0}
 --- !u!212 &1310974944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1524,7 +1525,7 @@ FixedJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.009000152, y: -0.61200017}
+  m_ConnectedAnchor: {x: -0.009000182, y: -0.6120002}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!255 &1442877873
@@ -1543,7 +1544,7 @@ FixedJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.1500012, y: 28.400002}
+  m_ConnectedAnchor: {x: -0.14999986, y: 28.400002}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!232 &1442877874
@@ -1564,7 +1565,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.86015546
+  m_Distance: 0.8601554
   m_MaxDistanceOnly: 1
 --- !u!114 &1442877875
 MonoBehaviour:
@@ -1773,6 +1774,7 @@ MonoBehaviour:
   attackOffset: 1
   maxHealth: 2
   healthText: {fileID: 1482973276}
+  spawnPoint: {x: 0, y: 0}
 --- !u!212 &1442877879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1820,7 +1822,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1266923482727272325, guid: 0db934e89d9e97d4d9b1689602a655d4,
+  m_Sprite: {fileID: -2428395112191071063, guid: 7e58bf4ca7a914a45a5d6d67c66596c0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
