@@ -181,6 +181,14 @@ public class player1 : MonoBehaviour
 
         // Stop all movement
         rb.linearVelocity = Vector2.zero;
+
+        foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
+        { 
+            if (obj.tag == "Untagged" && obj.scene.IsValid())
+            {
+                obj.SetActive(true);
+            }
+        }
     }
 }
 

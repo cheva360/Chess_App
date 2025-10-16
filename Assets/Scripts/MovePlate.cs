@@ -53,30 +53,60 @@ public class MovePlate : MonoBehaviour
                 {
                     obj.SetActive(true);
                 }
-            }
+                if (obj.tag == "Untagged" && obj.scene.IsValid() && obj.activeInHierarchy)
+                {
+                    obj.SetActive(false);
+                }
 
+            }
+            bool isPVP = true;
+
+
+            ////Set the Chesspiece's original location to be empty
+            //game.SetPositionEmpty(chessman.GetXBoard(),
+            //chessman.GetYBoard());
+
+            ////Move reference chess piece to this position
+            //chessman.SetXBoard(matrixX);
+            //chessman.SetYBoard(matrixY);
+            //chessman.SetCoords();
+
+
+            ////Update the matrix
+            //game.SetPosition(reference);
+            chessman.SetMoveEnd();
+
+            //Switch Current Player
+            game.NextTurn();
+
+            //Destroy the move plates including self
+            chessman.DestroyMovePlates();
 
         }
-
-        //Set the Chesspiece's original location to be empty
-        game.SetPositionEmpty(chessman.GetXBoard(),
+        else
+        {
+            //Set the Chesspiece's original location to be empty
+            game.SetPositionEmpty(chessman.GetXBoard(),
             chessman.GetYBoard());
 
-        //Move reference chess piece to this position
-        chessman.SetXBoard(matrixX);
-        chessman.SetYBoard(matrixY);
-        chessman.SetCoords();
+            //Move reference chess piece to this position
+            chessman.SetXBoard(matrixX);
+            chessman.SetYBoard(matrixY);
+            chessman.SetCoords();
 
 
-        //Update the matrix
-        game.SetPosition(reference);
-        chessman.SetMoveEnd();
+            //Update the matrix
+            game.SetPosition(reference);
+            chessman.SetMoveEnd();
 
-        //Switch Current Player
-        game.NextTurn();
+            //Switch Current Player
+            game.NextTurn();
 
-        //Destroy the move plates including self
-        chessman.DestroyMovePlates();
+            //Destroy the move plates including self
+            chessman.DestroyMovePlates();
+        }
+
+        
 
     }
 
