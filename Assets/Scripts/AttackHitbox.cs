@@ -8,7 +8,6 @@ public class AttackHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("attacked!");
 
         // We only care if we hit an object tagged as "Player"
         if (other.CompareTag("Player"))
@@ -18,6 +17,8 @@ public class AttackHitbox : MonoBehaviour
             if (other.gameObject != owner)
             {
                 player1 opponent = other.GetComponent<player1>();
+                Debug.Log("attacked!");
+
                 if (opponent != null)
                 {
                     // Tell the other player to take 1 damage

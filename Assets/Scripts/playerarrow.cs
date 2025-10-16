@@ -50,8 +50,6 @@ public class player1arrow : MonoBehaviour
     private IEnumerator AttackEffectCoroutine()
     {
         sr.color = Color.yellow;
-        Debug.Log("Arrow Attack Effect Triggered");
-
         // The duration of the visual effect
         yield return new WaitForSeconds(0.3f);
 

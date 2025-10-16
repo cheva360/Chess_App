@@ -17,6 +17,9 @@ public class MovePlate : MonoBehaviour
     //false: movement, true: attacking
     public bool attack = false;
 
+    public GameObject P1;
+    public GameObject P2;
+
     public void Start()
     {
         if (attack)
@@ -40,9 +43,19 @@ public class MovePlate : MonoBehaviour
             if (cp.name == "white_king") game.Winner("black");
             if (cp.name == "black_king") game.Winner("white");
 
-            Destroy(cp);
+            //Destroy(cp);
             Debug.Log(cp);
             Debug.Log(reference);
+            //when attacking make game objects tagged as "player" active
+            foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
+            {
+                if (obj.CompareTag("Player"))
+                {
+                    obj.SetActive(true);
+                }
+            }
+
+
         }
 
         //Set the Chesspiece's original location to be empty
