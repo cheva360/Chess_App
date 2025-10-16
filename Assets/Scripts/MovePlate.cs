@@ -74,14 +74,14 @@ public class MovePlate : MonoBehaviour
 
 
             ////Update the matrix
-            //game.SetPosition(reference);
-            chessman.SetMoveEnd();
+            ////game.SetPosition(reference);
+            //chessman.SetMoveEnd();
 
-            //Switch Current Player
-            game.NextTurn();
+            ////Switch Current Player
+            //game.NextTurn();
 
-            //Destroy the move plates including self
-            chessman.DestroyMovePlates();
+            ////Destroy the move plates including self
+            //chessman.DestroyMovePlates();
 
         }
         else
@@ -126,4 +126,29 @@ public class MovePlate : MonoBehaviour
     {
         return reference;
     }
+
+    private void FixedUpdate()
+    {
+        // Example: Check if P1 or P2 is dead
+        if (P1 != null)
+        {
+            var p1Script = P1.GetComponent<player1>();
+            if (p1Script != null && p1Script.IsDead)
+            {
+                Debug.Log("Player 1 is dead!");
+                // Handle player 1 death logic here
+            }
+        }
+
+        if (P2 != null)
+        {
+            var p2Script = P2.GetComponent<player1>();
+            if (p2Script != null && p2Script.IsDead)
+            {
+                Debug.Log("Player 2 is dead!");
+                // Handle player 2 death logic here
+            }
+        }
+    }
+
 }

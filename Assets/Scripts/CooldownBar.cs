@@ -56,4 +56,5 @@ public class CooldownBar : MonoBehaviour
         // Once the loop is done, make the bar invisible again
         cooldownImage.enabled = false;
     }
+
 }

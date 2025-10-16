@@ -55,4 +55,9 @@ public class player1arrow : MonoBehaviour
 
         sr.color = Color.white;
     }
+
+    private void OnEnable()
+    {
+        sr.color = Color.white;
+    }
 }

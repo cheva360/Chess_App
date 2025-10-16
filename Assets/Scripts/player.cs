@@ -1,10 +1,20 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
+using UnityEngine.InputSystem.XR;
 
 public class player1 : MonoBehaviour
 {
+    //Some functions will need reference to the controller
+    public GameObject controller;
+
+    //The Chesspiece that was tapped to create this MovePlate
+    GameObject reference = null;
+
+ 
+    int matrixX;
+    int matrixY;
     // Movement & Dash
     private float speed = 1f;
     private Rigidbody2D rb;
@@ -12,13 +22,15 @@ public class player1 : MonoBehaviour
     private Vector2 lastMoveDirection;
     private bool isDashing = false;
     private bool canDash = true;
-    private float dashCooldown = 1f;
+    public float dashCooldown = 1f;
+    public float dashTime = 0.4f;
 
     // Components & Prefabs
     private SpriteRenderer spriteRenderer;
     private Collider2D playerCollider;
     public CooldownBar dashCooldownBar;
     public player1arrow arrowIndicator;
+    public int playerNumber = 1; // Set this in the Inspector to 1 or 2
 
     [Header("Attack Settings")]
     public GameObject attackPrefab; // The hitbox prefab you created
@@ -62,6 +74,13 @@ public class player1 : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+        if (dashCooldownBar != null)
+        {
+            // Offset by 1 unit below the player
+            dashCooldownBar.transform.position = transform.position + new Vector3(0, -.6f, 0);
+        }
+
+
     }
 
     void FixedUpdate()
@@ -87,6 +106,8 @@ public class player1 : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
             }
         }
+        
+
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -114,14 +135,16 @@ public class player1 : MonoBehaviour
         canDash = false;
         isDashing = true;
         float dashPower = 4f;
-        float dashTime = 0.3f;
+        
+
+        GameObject attackInstance = null;
 
         // --- SPAWN ATTACK HITBOX ---
         if (attackPrefab != null)
         {
-            // Calculate spawn position in front of the player
+            // Calculate initial spawn position in front of the player
             Vector2 spawnPos = (Vector2)transform.position + lastMoveDirection * attackOffset;
-            GameObject attackInstance = Instantiate(attackPrefab, spawnPos, Quaternion.identity);
+            attackInstance = Instantiate(attackPrefab, spawnPos, Quaternion.identity);
 
             // Tell the hitbox who created it to avoid self-damage
             attackInstance.GetComponent<AttackHitbox>().owner = this.gameObject;
@@ -141,7 +164,21 @@ public class player1 : MonoBehaviour
         }
 
         rb.linearVelocity = lastMoveDirection * dashPower;
-        yield return new WaitForSeconds(dashTime);
+
+        float elapsed = 0f;
+        Vector2 dashDirection = lastMoveDirection;
+        while (elapsed < dashTime)
+        {
+            if (attackInstance != null)
+            {
+                // Keep the hitbox in front of the player during the dash
+                attackInstance.transform.position = (Vector2)transform.position + dashDirection * attackOffset;
+                
+            }
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
         rb.linearVelocity = Vector2.zero;
         isDashing = false;
 
@@ -170,24 +207,21 @@ public class player1 : MonoBehaviour
         }
     }
 
+    //public void OnMouseUp()
+    //{
+    //    controller = GameObject.FindGameObjectWithTag("GameController");
+    //    Game game = controller.GetComponent<Game>();
+    //    Chessman chessman = reference.GetComponent<Chessman>();
+    //    GameObject cp = game.GetPosition(matrixX, matrixY);
 
+    //}
     void Die()
     {
-        //isDead = true;
 
-        //// Make the player invisible and unable to collide with anything
-        //spriteRenderer.enabled = false;
-        //playerCollider.enabled = false;
-
-        //// Make the health text invisible too
-        //if (healthText != null)
-        //{
-        //    healthText.gameObject.SetActive(false);
-        //}
-
-        //// Stop all movement
-        //rb.linearVelocity = Vector2.zero;
-
+        //controller = GameObject.FindGameObjectWithTag("GameController");
+        //Game game = controller.GetComponent<Game>();
+        //Chessman chessman = reference.GetComponent<Chessman>();
+        //    GameObject cp = game.GetPosition(matrixX, matrixY);
 
 
         foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
@@ -203,6 +237,19 @@ public class player1 : MonoBehaviour
         }
 
         hasReactivated = false; // Reset flag so ReactivatePlayer can be called next time
+
+        ////Set the Chesspiece's original location to be empty
+        //game.SetPositionEmpty(chessman.GetXBoard(),
+        //chessman.GetYBoard());
+
+        ////Move reference chess piece to this position
+        //chessman.SetXBoard(matrixX);
+        //chessman.SetYBoard(matrixY);
+        //chessman.SetCoords();
+
+
+        ////Update the matrix
+        //game.SetPosition(reference);
     }
 
     void OnEnable()
@@ -218,6 +265,9 @@ public class player1 : MonoBehaviour
 
         // Teleport to spawn point
         transform.position = spawnPoint;
+        
+        //dashCooldownBar.transform.position = transform.position;
+
 
         // Re-enable visuals and collider
         if (spriteRenderer != null) spriteRenderer.enabled = true;
@@ -228,6 +278,8 @@ public class player1 : MonoBehaviour
         if (rb != null) rb.linearVelocity = Vector2.zero;
         
     }
+
+
 
     
 }
