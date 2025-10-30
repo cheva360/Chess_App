@@ -48,6 +48,8 @@ public class MovePlate : MonoBehaviour
         if (attack)
         {
             cp = game.GetPosition(matrixX, matrixY);
+            deathLogic.targetx = matrixX;
+            deathLogic.targety = matrixY;
 
             if (cp != null)
             {
@@ -93,17 +95,7 @@ public class MovePlate : MonoBehaviour
             //chessman.SetXBoard(matrixX);
             //chessman.SetYBoard(matrixY);
             //chessman.SetCoords();
-
-
-            //////Update the matrix
-            ////game.SetPosition(reference);
-            //chessman.SetMoveEnd();
-
-            ////Switch Current Player
-            //game.NextTurn();
-
-            ////Destroy the move plates including self
-            //chessman.DestroyMovePlates()
+            
         }
         else
         {
@@ -148,15 +140,37 @@ public class MovePlate : MonoBehaviour
             {
                 if (deathLogic.attackerIsWhite)
                 {
+                    chessman.SetMoveEnd();
 
+                    ////Switch Current Player
+                    game.NextTurn();
 
+                    ////Destroy the move plates including self
+                    chessman.DestroyMovePlates();
                     Destroy(targetref);
-
                 }
                 else
                 {
-                    Destroy(deathLogic.targetcp);
+                    //Set the Chesspiece's original location to be empty
+                    game.SetPositionEmpty(chessman.GetXBoard(),
+                    chessman.GetYBoard());
 
+                    //Move reference chess piece to this position
+                    chessman.SetXBoard(deathLogic.targetx);
+                    chessman.SetYBoard(deathLogic.targety);
+                    chessman.SetCoords();
+
+
+                    ////Update the matrix
+                    game.SetPosition(targetref);
+                    chessman.SetMoveEnd();
+
+                    ////Switch Current Player
+                    game.NextTurn();
+
+                    ////Destroy the move plates including self
+                    chessman.DestroyMovePlates();
+                    Destroy(deathLogic.targetcp);
                 }
 
                 deathLogic.attackdead = false;
@@ -166,13 +180,40 @@ public class MovePlate : MonoBehaviour
             {
                 if (deathLogic.attackerIsWhite)
                 {
+                    //Set the Chesspiece's original location to be empty
+                    game.SetPositionEmpty(chessman.GetXBoard(),
+                    chessman.GetYBoard());
+
+                    //Move reference chess piece to this position
+                    chessman.SetXBoard(deathLogic.targetx);
+                    chessman.SetYBoard(deathLogic.targety);
+                    chessman.SetCoords();
+
+
+                    ////Update the matrix
+                    game.SetPosition(targetref);
+                    chessman.SetMoveEnd();
+
+                    ////Switch Current Player
+                    game.NextTurn();
+
+                    ////Destroy the move plates including self
+                    chessman.DestroyMovePlates();
                     Destroy(deathLogic.targetcp);
 
 
                 }
                 else
                 {
+                    chessman.SetMoveEnd();
+
+                    ////Switch Current Player
+                    game.NextTurn();
+
+                    ////Destroy the move plates including self
+                    chessman.DestroyMovePlates();
                     Destroy(targetref);
+
 
                 }
 

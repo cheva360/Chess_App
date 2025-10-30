@@ -49,6 +49,8 @@ public class player1arrow : MonoBehaviour
     // The coroutine that handles the visual effect (renamed for clarity).
     private IEnumerator AttackEffectCoroutine()
     {
+        sr = GetComponent<SpriteRenderer>();
+
         sr.color = Color.yellow;
         // The duration of the visual effect
         yield return new WaitForSeconds(0.3f);
@@ -58,6 +60,8 @@ public class player1arrow : MonoBehaviour
 
     private void OnEnable()
     {
+        sr = GetComponent<SpriteRenderer>();
+
         sr.color = Color.white;
     }
 }

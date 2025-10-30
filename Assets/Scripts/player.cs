@@ -11,8 +11,10 @@ public class player1 : MonoBehaviour
 
     //The Chesspiece that was tapped to create this MovePlate
     GameObject reference = null;
+    public Camera mainCamera;
 
-    
+
+
 
     int matrixX;
     int matrixY;
@@ -318,13 +320,15 @@ public class player1 : MonoBehaviour
         // Stop all movement
         if (rb != null) rb.linearVelocity = Vector2.zero;
 
+        // Reset camera rotation
+        Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-        
+
 
     }
 
 
 
-    
+
 }
 

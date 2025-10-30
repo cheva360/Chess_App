@@ -660,6 +660,7 @@ MonoBehaviour:
     type: 3}
   P1: {fileID: 1310974940}
   P2: {fileID: 1442877871}
+  mainCamera: {fileID: 519420031}
 --- !u!114 &503884395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +679,8 @@ MonoBehaviour:
   targetdead: 0
   attackerIsWhite: 0
   targetcp: {fileID: 0}
+  targetx: 0
+  targety: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   controller: {fileID: 503884392}
+  mainCamera: {fileID: 519420031}
   dashCooldown: 1
   dashTime: 0.4
   dashCooldownBar: {fileID: 1511911154}
@@ -1792,6 +1796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   controller: {fileID: 503884392}
+  mainCamera: {fileID: 519420031}
   dashCooldown: 1
   dashTime: 0.4
   dashCooldownBar: {fileID: 1055744287}

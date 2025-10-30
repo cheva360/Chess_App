@@ -10,6 +10,7 @@ public class Game : MonoBehaviour
     public GameObject chesspiece;
     public GameObject P1;
     public GameObject P2;
+    public Camera mainCamera;
 
     //Matrices needed, positions of each of the GameObjects
     //Also separate arrays for the players in order to easily keep track of them all
@@ -100,12 +101,22 @@ public class Game : MonoBehaviour
 
     public void NextTurn()
     {
+
         if (currentPlayer == "white")
         {
+            Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+            //make all objects tagged as untagged set rotation 180
+            //foreach (var obj in GameObject.FindGameObjectsWithTag("Untagged"))
+            //{
+            //    obj.transform.rotation = Quaternion.Euler(180f, 0f, 0f);
+
+            //    //if (obj != null && obj.scene.IsValid() && obj.activeInHierarchy)
+            //}
             currentPlayer = "black";
         }
         else
         {
+            Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             currentPlayer = "white";
         }
     }
