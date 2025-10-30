@@ -127,28 +127,29 @@ public class MovePlate : MonoBehaviour
         return reference;
     }
 
-    private void FixedUpdate()
-    {
-        // Example: Check if P1 or P2 is dead
-        if (P1 != null)
-        {
-            var p1Script = P1.GetComponent<player1>();
-            if (p1Script != null && p1Script.IsDead)
-            {
-                Debug.Log("Player 1 is dead!");
-                // Handle player 1 death logic here
-            }
-        }
+    // player 1 or player 2 death check
+    //private void FixedUpdate()
+    //{
+    //    // Example: Check if P1 or P2 is dead
+    //    if (P1 != null)
+    //    {
+    //        var p1Script = P1.GetComponent<player1>();
+    //        if (p1Script != null && p1Script.IsDead)
+    //        {
+    //            Debug.Log("Player 1 is dead!");
+    //            // Handle player 1 death logic here
+    //        }
+    //    }
 
-        if (P2 != null)
-        {
-            var p2Script = P2.GetComponent<player1>();
-            if (p2Script != null && p2Script.IsDead)
-            {
-                Debug.Log("Player 2 is dead!");
-                // Handle player 2 death logic here
-            }
-        }
-    }
+    //    if (P2 != null)
+    //    {
+    //        var p2Script = P2.GetComponent<player1>();
+    //        if (p2Script != null && p2Script.IsDead)
+    //        {
+    //            Debug.Log("Player 2 is dead!");
+    //            // Handle player 2 death logic here
+    //        }
+    //    }
+    //}
 
 }
