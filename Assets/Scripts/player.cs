@@ -231,19 +231,39 @@ public class player1 : MonoBehaviour
         
         if (playerNumber == 1)
         {
-            deathLogic.attacker = "white";
-            deathLogic.attackerIsWhite = true;
-            deathLogic.target = "black";
+
             deathLogic.attackdead = true;
         }
         else
         {
-            deathLogic.attacker = "black";
-            deathLogic.attackerIsWhite = false;
-            deathLogic.target = "white";
+
             deathLogic.targetdead = true;
 
         }
+
+        // Reset dash state
+        canDash = true;
+        isDashing = false;
+
+        // Reset health
+        currentHealth = maxHealth;
+        UpdateHealthText();
+        isDead = false;
+
+        // Teleport to spawn point
+        transform.position = spawnPoint;
+
+        //dashCooldownBar.transform.position = transform.position;
+
+
+        // Re-enable visuals and collider
+        if (spriteRenderer != null) spriteRenderer.enabled = true;
+        if (playerCollider != null) playerCollider.enabled = true;
+        if (healthText != null) healthText.gameObject.SetActive(true);
+
+        // Stop all movement
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+
 
         foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
         {

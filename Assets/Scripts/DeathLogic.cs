@@ -13,5 +13,8 @@ public class DeathLogic : MonoBehaviour
     public void FixedUpdate()
     {
         Debug.Log(targetcp);
+        Debug.Log(attackerIsWhite);
+        Debug.Log(attackdead);
+        Debug.Log(targetdead);
     }
 }

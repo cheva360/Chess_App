@@ -51,8 +51,8 @@ public class MovePlate : MonoBehaviour
 
             if (cp != null)
             {
-                if (cp.name == "white_king") game.Winner("black");
-                if (cp.name == "black_king") game.Winner("white");
+                //if (cp.name == "white_king") game.Winner("black");
+                //if (cp.name == "black_king") game.Winner("white");
 
 
                 if (cp.name.Contains("white"))
@@ -85,9 +85,25 @@ public class MovePlate : MonoBehaviour
 
             }
 
+            ////Set the Chesspiece's original location to be empty
+            //game.SetPositionEmpty(chessman.GetXBoard(),
+            //chessman.GetYBoard());
 
-            // If you still rely on DeathLogic to drive some behavior, you can set flags here.
-            // (Leave deathLogic.* flags alone if DeathLogic sets them elsewhere.)
+            ////Move reference chess piece to this position
+            //chessman.SetXBoard(matrixX);
+            //chessman.SetYBoard(matrixY);
+            //chessman.SetCoords();
+
+
+            //////Update the matrix
+            ////game.SetPosition(reference);
+            //chessman.SetMoveEnd();
+
+            ////Switch Current Player
+            //game.NextTurn();
+
+            ////Destroy the move plates including self
+            //chessman.DestroyMovePlates()
         }
         else
         {
@@ -125,121 +141,38 @@ public class MovePlate : MonoBehaviour
         Chessman chessman = reference.GetComponent<Chessman>();
 
 
-        // If DeathLogic told us the target died, make sure we remove it from the board and destroy it.
-        if (deathLogic != null && deathLogic.targetdead)
-        {
-            // Guard: only destroy if reference is not already null
-            Destroy(deathLogic.targetcp);
 
-            deathLogic.targetdead = false;
-        }
-
-        if (deathLogic != null)
+        if (deathLogic != null && targetref != null)
         {
             if (deathLogic.attackdead)
             {
                 if (deathLogic.attackerIsWhite)
                 {
 
-                    //Set the Chesspiece's original location to be empty
-                    game.SetPositionEmpty(chessman.GetXBoard(),
-                    chessman.GetYBoard());
 
-                    //Move reference chess piece to this position
-                    chessman.SetXBoard(matrixX);
-                    chessman.SetYBoard(matrixY);
-                    chessman.SetCoords();
-
-
-                    //Update the matrix
-                    game.SetPosition(targetref);
-                    chessman.SetMoveEnd();
-
-                    //Switch Current Player
-                    game.NextTurn();
-
-                    //Destroy the move plates including self
-                    chessman.DestroyMovePlates();
-
-                    Destroy(deathLogic.targetcp);
+                    Destroy(targetref);
 
                 }
                 else
                 {
-                    //Set the Chesspiece's original location to be empty
-                    game.SetPositionEmpty(chessman.GetXBoard(),
-                    chessman.GetYBoard());
+                    Destroy(deathLogic.targetcp);
 
-                    //Move reference chess piece to this position
-                    chessman.SetXBoard(matrixX);
-                    chessman.SetYBoard(matrixY);
-                    chessman.SetCoords();
-
-
-                    //Update the matrix
-                    game.SetPosition(targetref);
-                    chessman.SetMoveEnd();
-
-                    //Switch Current Player
-                    game.NextTurn();
-
-                    //Destroy the move plates including self
-                    chessman.DestroyMovePlates();
-
-                    Destroy(targetref);
                 }
 
-                deathLogic.targetdead = false;
+                deathLogic.attackdead = false;
             }
 
             if (deathLogic.targetdead)
             {
                 if (deathLogic.attackerIsWhite)
                 {
-                    //Set the Chesspiece's original location to be empty
-                    game.SetPositionEmpty(chessman.GetXBoard(),
-                    chessman.GetYBoard());
+                    Destroy(deathLogic.targetcp);
 
-                    //Move reference chess piece to this position
-                    chessman.SetXBoard(matrixX);
-                    chessman.SetYBoard(matrixY);
-                    chessman.SetCoords();
-
-
-                    //Update the matrix
-                    game.SetPosition(reference);
-                    chessman.SetMoveEnd();
-
-                    //Switch Current Player
-                    game.NextTurn();
-
-                    //Destroy the move plates including self
-                    chessman.DestroyMovePlates();
-                    Destroy(targetref);
 
                 }
                 else
                 {
-                    //Set the Chesspiece's original location to be empty
-                    game.SetPositionEmpty(chessman.GetXBoard(),
-                    chessman.GetYBoard());
-
-                    //Move reference chess piece to this position
-                    chessman.SetXBoard(matrixX);
-                    chessman.SetYBoard(matrixY);
-                    chessman.SetCoords();
-
-
-                    //Update the matrix
-                    game.SetPosition(reference);
-                    chessman.SetMoveEnd();
-
-                    //Switch Current Player
-                    game.NextTurn();
-
-                    //Destroy the move plates including self
-                    chessman.DestroyMovePlates();
-                    Destroy(deathLogic.targetcp);
+                    Destroy(targetref);
 
                 }
 
