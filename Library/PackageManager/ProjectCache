@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/sebas/OneDrive/Documents/GitHub/ChessFight/Chess_App/Packages/manifest.json
+    m_FilePath: C:/Users/sebas/OneDrive/Documents/GitHub/CHESS/Chess_App/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638954477687587925
+      ticks: 638956245319749417
     m_Hash: 3183373965
   m_LockFileStatus:
-    m_FilePath: C:/Users/sebas/OneDrive/Documents/GitHub/ChessFight/Chess_App/Packages/packages-lock.json
+    m_FilePath: C:/Users/sebas/OneDrive/Documents/GitHub/CHESS/Chess_App/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638954477687587925
+      ticks: 638956245319749417
     m_Hash: 2197523545
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/sebas/OneDrive/Documents/GitHub/ChessFight/Chess_App/Packages
+m_ProjectPath: C:/Users/sebas/OneDrive/Documents/GitHub/CHESS/Chess_App/Packages
 m_EditorVersion: 6000.2.5f1 (43d04cd1df69)
 m_ResolvedPackages:
 - packageId: com.unity.2d.sprite@1.0.0
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.2d.sprite@331abd9a1e2f
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -107,7 +107,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.2d.tilemap@aa5f5491174d
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.2d.tilemap@aa5f5491174d
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -206,7 +206,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.9
   source: 1
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.ai.navigation@5218e4bf7edc
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.ai.navigation@5218e4bf7edc
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -339,7 +339,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.9.3
   source: 1
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -517,7 +517,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.23
   source: 1
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -635,7 +635,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.14.2
   source: 1
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.inputsystem@be6c4fd0abf5
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -795,7 +795,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -891,7 +891,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.5.1
   source: 2
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.test-framework@038a2b0cacd2
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.test-framework@038a2b0cacd2
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -981,7 +981,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.9
   source: 1
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.timeline@6b9e48457ddb
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.timeline@6b9e48457ddb
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1179,7 +1179,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.ugui@38c58105e446
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.ugui@38c58105e446
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -4040,7 +4040,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\ChessFight\Chess_App\Library\PackageCache\com.unity.ext.nunit@031a54704bff
+  resolvedPath: C:\Users\sebas\OneDrive\Documents\GitHub\CHESS\Chess_App\Library\PackageCache\com.unity.ext.nunit@031a54704bff
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit

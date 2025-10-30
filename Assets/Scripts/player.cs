@@ -12,7 +12,8 @@ public class player1 : MonoBehaviour
     //The Chesspiece that was tapped to create this MovePlate
     GameObject reference = null;
 
- 
+    
+
     int matrixX;
     int matrixY;
     // Movement & Dash
@@ -57,7 +58,7 @@ public class player1 : MonoBehaviour
         // Initialize Health
         currentHealth = maxHealth;
         UpdateHealthText();
-        Debug.Log("activated");
+        //Debug.Log("activated");
     }
 
     void Update()
@@ -215,6 +216,7 @@ public class player1 : MonoBehaviour
     //    GameObject cp = game.GetPosition(matrixX, matrixY);
 
     //}
+
     void Die()
     {
 
@@ -223,6 +225,25 @@ public class player1 : MonoBehaviour
         //Chessman chessman = reference.GetComponent<Chessman>();
         //    GameObject cp = game.GetPosition(matrixX, matrixY);
 
+
+        //deathlogic
+        DeathLogic deathLogic = controller.GetComponent<DeathLogic>();
+        
+        if (playerNumber == 1)
+        {
+            deathLogic.attacker = "white";
+            deathLogic.attackerIsWhite = true;
+            deathLogic.target = "black";
+            deathLogic.attackdead = true;
+        }
+        else
+        {
+            deathLogic.attacker = "black";
+            deathLogic.attackerIsWhite = false;
+            deathLogic.target = "white";
+            deathLogic.targetdead = true;
+
+        }
 
         foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
         {
@@ -276,7 +297,10 @@ public class player1 : MonoBehaviour
 
         // Stop all movement
         if (rb != null) rb.linearVelocity = Vector2.zero;
+
+
         
+
     }
 
 

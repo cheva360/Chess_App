@@ -621,6 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503884393}
   - component: {fileID: 503884394}
+  - component: {fileID: 503884395}
   m_Layer: 0
   m_Name: Controller
   m_TagString: GameController
@@ -657,6 +658,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chesspiece: {fileID: 2692184396404375449, guid: 915e3d2f2d245114d8cfae431dea5f1b,
     type: 3}
+  P1: {fileID: 1310974940}
+  P2: {fileID: 1442877871}
+--- !u!114 &503884395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503884392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a172f44fad900d4eb9e3de4bb83a420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathLogic
+  attacker: 
+  target: 
+  attackdead: 0
+  targetdead: 0
+  attackerIsWhite: 0
+  targetcp: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d2ad0c93f1f6d48a3aaf447a0e2d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  controller: {fileID: 503884392}
   dashCooldown: 1
   dashTime: 0.4
   dashCooldownBar: {fileID: 1511911154}
@@ -1769,6 +1791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d2ad0c93f1f6d48a3aaf447a0e2d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  controller: {fileID: 503884392}
   dashCooldown: 1
   dashTime: 0.4
   dashCooldownBar: {fileID: 1055744287}

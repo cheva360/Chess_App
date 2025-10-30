@@ -106,8 +106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   attack: 0
-  P1: {fileID: 0}
-  P2: {fileID: 0}
 --- !u!61 &-3114578102174500034
 BoxCollider2D:
   m_ObjectHideFlags: 0

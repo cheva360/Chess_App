@@ -8,6 +8,8 @@ public class Game : MonoBehaviour
 {
     //Reference from Unity IDE
     public GameObject chesspiece;
+    public GameObject P1;
+    public GameObject P2;
 
     //Matrices needed, positions of each of the GameObjects
     //Also separate arrays for the players in order to easily keep track of them all
@@ -15,6 +17,7 @@ public class Game : MonoBehaviour
     private GameObject[,] positions = new GameObject[8, 8];
     private GameObject[] playerBlack = new GameObject[16];
     private GameObject[] playerWhite = new GameObject[16];
+    
 
     //current turn
     private string currentPlayer = "white";
